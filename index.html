@@ -373,6 +373,24 @@ small, .small { font-size: var(--step--1); }
 .p-modal header { border-bottom: var(--border); }
 .p-modal footer { border-top: 2px dashed var(--line); justify-content: flex-end; flex-wrap: wrap; }
 .p-modal-body { padding: 16px; }
+
+/* Computador: a página usa a largura da tela (a tabela do elenco cabia com folga e sobrava faixa vazia) e o topo
+   de cada tela fica mais baixo, para a lista começar mais acima. O celular não muda. */
+@media (min-width: 861px) {
+  .p-main { max-width: 1880px; padding: 16px 24px 40px; }
+  .p-backbar { margin: 0 0 6px; }
+  .p-back { min-height: 36px; padding: 4px 12px 4px 8px; font-size: .88rem; }
+  .p-page-head h1 { font-size: clamp(1.8rem, 2.6vw, 2.6rem); }
+  .p-stat { padding: 8px 12px; gap: 2px; }
+  .p-stat b { font-size: 1.3rem; }
+  .p-stat b.num { font-size: 1.05rem; }
+  .p-tabs { margin-bottom: 10px; }
+  .p-tab { min-height: 38px; padding: 6px 12px; }
+  .p-section { padding: 12px 14px; }
+  .p-section-head { margin-bottom: 8px; }
+  .p-table td { padding: 6px 8px; }
+  .p-stack { gap: 12px; }
+}
 </style>
 <style>/* Prancheta · mapa 2D do jogo: as mesmas classes e o mesmo desenho do mapa do Da Várzea (src/ui/pitch.js e styles.css),
    com borda de tinta e sombra chapada; as cores sobre a grama saem dos tokens (--on-grass, --on-grass-drop). */
